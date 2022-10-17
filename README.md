@@ -1,15 +1,22 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
-
-> Description the project.
-
+# Recipe-App
+The Recipe app keeps track of all your recipes, ingredients, and inventory. It will allow you to save ingredients, keep track of what you have, create recipes, and generate a shopping list based on what you have and what you are missing from a recipe. Also, since sharing recipes is an important part of cooking the app would allow you to make them public so anyone can access them
 
 ## Built With
 
-- Major languages
-- Frameworks
+- Languages used
+- 
+- Ruby
+- HTML
+- CSS
+- Rails
+  
 - Technologies used
+- PostgreSql
+- Rspec
+- Capybara
+- Bullet
 
 ## Live Demo (if available)
 
@@ -18,39 +25,62 @@
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+### Prerequisite
+Go ahead and check the most recent version of each of these:
+- Ruby (ruby --version)
+- PostgreSQL (PostgreSQL --version)
+- Node.js (node --version)
+- Yarn (yarn --version)
+- Rails (rails --version)
 
+## Clone this repository
 
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
-
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
+To clone the repo run:
+```
+git clone https://github.com/MoRaad97/recipe-app.git
+```
+To access the cloned directory, run:
+```
+cd recipe-app
+```
+Install the required dependecies with:
+```
+bundle install
+```
+Install npm dependencies with:
+```
+npm install
+```
+Before running below commands update config/database.yml with your local DBcredentials. Then run:
+```
+rake db:create
+```
+```
+rake db:migrate
+```
+```
+rake db:seed
+```
 
 
 ## Authors
 
-👤 **Author1**
+👤**Mohammed Raad**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@MoRaad97](https://github.com/MoRaad97)
 
-👤 **Author2**
+-Twitter: [@MohammedRaadz](https://twitter.com/MohammedRaadz)
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- LinkedIn: [Mohammed Raad](linkedin.com/in/mohammed-raad-600176210)
+
+
+👤 **Oyewunmi Gbenga**
+
+- GitHub: [@githubhandle](https://github.com/kelomo2502)
+- Twitter: [@twitterhandle](https://twitter.com/kelomoJs)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/oyewunmi-gbenga)
 
 ## 🤝 Contributing
 
