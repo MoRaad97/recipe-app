@@ -5,20 +5,20 @@ The Recipe app keeps track of all your recipes, ingredients, and inventory. It w
 
 ## Built With
 - Languages used
-- Ruby
-- HTML
-- CSS
-- Rails
+  - Ruby
+  - HTML
+  - CSS
+  - Rails
   
 - Technologies used
-- PostgreSql
-- Rspec
-- Capybara
-- Bullet
+  - PostgreSql
+  - Rspec
+  - Capybara
+  - Bullet
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://livedemo.com)
+[No available](https://github.com/MoRaad97/recipe-app)
 
 
 ## Getting Started
