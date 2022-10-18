@@ -1,0 +1,14 @@
+<h2>RECIPE LIST GOES HERE</h2>
+<section>
+  <h1>Recipes</h1>
+
+  <div>
+    <% if @recipes.empty? %>
+      <h2 class="text-center">The list is empty.</h2>
+    <% else %>
+      <% @recipes.each do |recipe| %>
+      <%= render('card', recipe:)  %>
+      <% end %>
+    <% end %>
+  </div>
+</section>
