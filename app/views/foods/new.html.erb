@@ -1,0 +1,27 @@
+<h1>New food</h1>
+
+<%= form_with model: @food do |f|%>
+
+<div class="field">
+  <%= f.label :name %> <br />
+  <%= f.text_field :name, autofocus: true,placeholder: 'Food Name' %>
+</div>
+
+<div class="field">
+  <%= f.label :measurement_unit %> <br />
+  <%= f.text_field :measurement_unit, placeholder: 'Measurement Unit' %>
+</div>
+
+<div class="field">
+  <%= f.label :price %> <br />
+  <%= f.text_field :price, placeholder: 'Price' %>
+</div>
+
+</div>
+
+<div class="actions"><%= f.submit "Add Food" %></div>
+
+<% end %>
+<br />
+
+<div><%= link_to "Back to foods", foods_path %></div>
