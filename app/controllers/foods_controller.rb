@@ -1,5 +1,4 @@
 class FoodsController < ApplicationController
-  before_action :set_food, only: %i[ show edit update destroy ]
 
   # GET /foods {food list page}
   def index
@@ -30,12 +29,11 @@ class FoodsController < ApplicationController
 
   # Delete Food Action
   def destroy
-    @food.destroy
-
-    respond_to do |format|
-      format.html { redirect_to foods_url, notice: "Food was successfully destroyed." }
+    @food = Food.find(params[:id])
+   if @food.destroy
+     redirect_to foods_path, notice: "Food was successfully destroyed." 
+   end
     end
-  end
 
   private
 
