@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
- devise_for :users
- resources :foods
+  devise_for :users, controllers: { registrations: "registrations" }
+  resources :foods
 end
