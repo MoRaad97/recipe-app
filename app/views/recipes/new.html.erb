@@ -1,0 +1,31 @@
+<h1>New Recipe</h1>
+
+<%= form_with model: @recipe do |f|%>
+
+<div class="field">
+  <%= f.label :name %> <br />
+  <%= f.text_field :name, autofocus: true,placeholder: 'Recipe Name' %>
+</div>
+
+<div class="field">
+  <%= f.label :preparation_time %> <br />
+  <%= f.text_field :preparation_time, placeholder: 'preparation_time' %>
+</div>
+
+<div class="field">
+  <%= f.label :cooking_time %> <br />
+  <%= f.text_field :cooking_time, placeholder: 'cooking_time' %>
+</div>
+
+<div class="field">
+  <%= f.label :description %> <br />
+  <%= f.text_field :description, placeholder: 'description' %>
+</div>
+
+
+<div class="actions"><%= f.submit "Add Recipe" %></div>
+
+<% end %>
+<br />
+
+<div><%= link_to "Back to Recipes", recipes_path %></div>
