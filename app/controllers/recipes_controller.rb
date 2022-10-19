@@ -1,9 +1,6 @@
 class RecipesController < ApplicationController
   def index
-    @recipes = Recipe
-      .includes(:user)
-      .where(user: current_user)
-      .order(created_at: :desc)
+    @recipes = Recipe.all
   end
 
   def new
@@ -11,32 +8,27 @@ class RecipesController < ApplicationController
   end
 
   def create
-    @recipe = Recipe.new(create_params)
-
+    @recipe = Recipe.new(recipe_params)
     if @recipe.save
-      redirect_to(recipes_path, notice: 'Recipe created successfully!')
+      redirect_to recipes_path, notice: 'Recipe created successfully!'
     else
-      render(:new, status: :unprocessable_entity, alert: @recipe.errors)
+      render :new, status: :unprocessable_entity
     end
   end
 
   def show
-    @recipe, = Recipe.where(id: params[:id], user: current_user)
-    @recipe_foods = @recipe.recipe_foods.includes(:food)
+    # @recipe, = Recipe.where(id: params[:id], user: current_user)
+    # @recipe_foods = @recipe.recipe_foods.includes(:food)
   end
 
   def destroy
-    @recipe, = Recipe.where(id: params[:id], user: current_user)
-    @recipe&.destroy
-    redirect_to recipes_path, notice: 'Recipe deleted!'
+    @recipe = Recipe.find(params[:id])
+    redirect_to recipes_path, notice: 'Recipe deleted!' if @recipe.destroy
   end
 
   private
 
-  def create_params
-    params
-      .require(:recipe)
-      .permit(:name, :preparation_time, :cooking_time, :description)
-      .merge(user: current_user)
+  def recipe_params
+    params.require(:recipe).permit(:name, :preparation_time, :cooking_time, :description)
   end
 end
