@@ -1,36 +1,32 @@
 class FoodsController < ApplicationController
-
   # GET /foods {food list page}
   def index
     @foods = Food.all
   end
 
   # GET /foods/1  {details Page}
-  def show
-  end
+  def show; end
 
   # GET /foods/new {create form page}
   def new
     @food = Food.new
   end
 
-  # POST /foods {Create Action} 
+  # POST /foods {Create Action}
   def create
     @food = Food.new(food_params)
-      if @food.save
-        redirect_to foods_path, notice: "Food was successfully created."
-      else
-      render :new, status: :unprocessable_entity 
-      end
+    if @food.save
+      redirect_to foods_path, notice: 'Food was successfully created.'
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   # Delete Food Action
   def destroy
     @food = Food.find(params[:id])
-   if @food.destroy
-     redirect_to foods_path, notice: "Food was successfully destroyed." 
-   end
-    end
+    redirect_to foods_path, notice: 'Food was successfully destroyed.' if @food.destroy
+  end
 
   private
 

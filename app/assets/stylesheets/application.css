@@ -1,10 +1,18 @@
 body {
   font-weight: bold;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  font-family:
+    'Lucida Sans',
+    'Lucida Sans Regular',
+    'Lucida Grande',
+    'Lucida Sans Unicode',
+    Geneva,
+    Verdana,
+    sans-serif;
 }
 
 a {
   text-decoration: none;
+  color: #fff;
 }
 
 .h1 {
@@ -31,16 +39,11 @@ a {
   margin-top: 5px;
   border-radius: 3px;
   border: 1px solid gray;
-  padding:5px 10px;
+  padding: 5px 10px;
 }
 
-a{
-  text-decoration: none;
+.recipe-name a {
   color: #fff;
-}
-
-.recipe-name a{
-  color: #222;
 }
 
 .recipe-bg {
@@ -79,7 +82,3 @@ a{
   color: #fff;
   border-radius: 8px;
 }
-
-.recipe-name a {
-  color: #fff;
-} 
