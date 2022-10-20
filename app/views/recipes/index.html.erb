@@ -1,15 +1,17 @@
 <h2>RECIPE LIST GOES HERE</h2>
+<button>
+  <%= link_to "Sign out", destroy_user_session_path, data: { turbo_method:
+  :delete } %>
+</button>
+
 <section>
   <h1>Recipes</h1>
 
   <div>
     <% if @recipes.empty? %>
-      <h2 class="text-center">The list is empty.</h2>
-    <% else %>
-      <% @recipes.each do |recipe| %>
-      <%= render('card', recipe:)  %>
-      <% end %>
-    <% end %>
+    <h2 class="text-center">The list is empty.</h2>
+    <% else %> <% @recipes.each do |recipe| %> <%= render('card', recipe:) %> <%
+    end %> <% end %>
   </div>
-        <%= link_to("Add New Recipe", new_recipe_path) %>
+  <%= link_to("Add New Recipe", new_recipe_path) %>
 </section>
