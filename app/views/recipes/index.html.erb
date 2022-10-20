@@ -1,8 +1,16 @@
+
+<h2>RECIPE LIST GOES HERE</h2>
+<button>
+  <%= link_to "Sign out", destroy_user_session_path, data: { turbo_method:
+  :delete } %>
+</button>
+
 <section class="d-flex flex-column align-items-center recipe-bg ">
   <h1 class="text-center mb-2 pt-5">Recipes</h1>
 
   <div class="d-flex flex-column link px-5">
     <% if @recipes.empty? %>
+
       <h2 class="text-center">The list is empty.</h2>
     <% else %>
         <% @recipes.each do |recipe|  %>
