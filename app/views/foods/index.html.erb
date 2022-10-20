@@ -1,17 +1,29 @@
-<p style="color: green"><%= notice %></p>
 
+<div class=" m-3 d-flex justify-content-between align-items-center w-75 food-header" >
 <h1>Foods</h1>
-<hr />
-<div id="foods">
-  <% @foods.each do |food| %>
-  <h3>Food:<%= food.name %></h3>
-  <h4>Price:<%= food.price %>$</h4>
-  <h4>Unit:<%= food.measurement_unit%></h4>
-  <p><%= link_to "Show this food", food_path(food.id) %></p>
-  <p><%= button_to 'delete', food_path(food.id), method: :delete%></p>
 
-  <h1>-----------------------</h1>
-  <% end %>
+ <%= link_to 'Add Food',new_food_path, class: "button" %> 
+
 </div>
 
-<%= link_to "New food", new_food_path %>
+
+<table  class="table table-bordered m-5 w-75 food-table">
+<thead>
+<tr>
+<th scope="col">Food </th>
+<th>Measurement unit </th>
+<th>Unit price </th>
+<th>Actions </th>
+</tr>
+</thead>
+<tbody>
+    <% @foods.each do |food|%>
+<tr>
+            <td> <%= food.name%></td>
+            <td> <%= food.measurement_unit%></td>
+            <td> $ <%= food.price%></td>
+            <td><%= button_to 'delete', food_path(food.id), method: :delete, class:"btn btn-warning"%></td>
+   </tr>
+    <%end%>
+</tbody>
+ </table>
