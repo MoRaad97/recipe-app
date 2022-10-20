@@ -10,14 +10,14 @@ class FoodsController < ApplicationController
     @food = Food.new
   end
 
-  # POST /foods {Create Action} 
+  # POST /foods {Create Action}
   def create
     @food = Food.new(food_params)
-      if @food.save
-        redirect_to foods_path, notice: "Food was successfully created."
-      else
-      render :new, status: :unprocessable_entity 
-      end
+    if @food.save
+      redirect_to foods_path, notice: 'Food was successfully created.'
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   # Delete Food Action
@@ -27,6 +27,7 @@ class FoodsController < ApplicationController
      redirect_to foods_path, notice: "Food was successfully destroyed." 
    end
     end
+
 
   private
 
