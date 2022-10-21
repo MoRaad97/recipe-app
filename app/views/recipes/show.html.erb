@@ -1,13 +1,14 @@
-<section>
-  <h3>Recipes details</h3>
+<section >
   <div class="recipe-details">
-    <h1><%= @recipe.name %></h1>
+    <h1 class="text-center fs-1 text-capitalize "><%= @recipe.name %></h1>
     <p>Preparation time: <%= @recipe.preparation_time %></p>
     <p>Cooking time: <%= @recipe.cooking_time %></p>
     <p><%= @recipe.description %></p>
-    <button>Generate a shopping list</button>
-    <button>Add ingredient</button>
+    <button class="generate-btn">Generate a shopping list</button>
+    <button class="add-ingredient-btn">Add ingredient</button>
   </div>
-  <div class=""></div>
-  <%= link_to("All Recipes", recipes_path) %>
+  <div class="all-recipes">
+    <%= link_to("All Recipes", recipes_path) %>
+  </div>
+  
 </section>
