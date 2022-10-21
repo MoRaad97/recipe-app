@@ -6,18 +6,17 @@ default: &default
 development:
   <<: *default
   database: recipe_app
-  username: postgres
-  password: sssss
+  username: moraad
+  password: 23568900
 
 test:
   <<: *default
   database: recipe_app
-  username: postgres
-  password: sssss
+  username: moraad
+  password: 23568900
 
 production:
   <<: *default
   database: recipe_app
-  username: postgres
-  password: sssss
-
+  username: moraad
+  password: 23568900
