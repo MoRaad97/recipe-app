@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'recipes#index'
+  root 'public_recipes#index'
   devise_for :users, controllers: { registrations: "registrations" }
 
   resources :recipes, only: %i[index show new create destroy] do
