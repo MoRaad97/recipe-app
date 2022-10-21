@@ -16,7 +16,9 @@ body {
     sans-serif;
 }
 
-h1,h2,h3 {
+h1,
+h2,
+h3 {
   color: #4a7856;
   font-size: 1rem;
 }
@@ -116,7 +118,7 @@ a {
   text-align: center;
   top: 77px;
   margin-bottom: 75px;
-  color:#4a7856;
+  color: #4a7856;
 }
 
 .sign-out-link-btn {
@@ -124,23 +126,23 @@ a {
   padding: 5px 8px;
   background: #4a7856;
   border-radius: 5px;
-
 }
 
 .recipe-details p {
-  color:#4a7856;
+  color: #4a7856;
   font-weight: 400;
   font-size: 20px;
 }
 
-.add-ingredient-btn, .generate-btn {
-
+.add-ingredient-btn,
+.generate-btn {
   color: #fff;
   background: #4a7856;
   border: 2px solid #4a7856;
   padding: 5px 10px;
   border-radius: 5px;
 }
+
 .generate-btn {
   margin-right: 10px;
 }
@@ -150,5 +152,5 @@ a {
 }
 
 .all-recipes a {
-  color:#4a7856;
+  color: #4a7856;
 }
