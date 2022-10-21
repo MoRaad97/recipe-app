@@ -22,16 +22,14 @@ class FoodsController < ApplicationController
 
   # Delete Food Action
   def destroy
-    food = Food.where(id: params[:id], user: current_user)
-   if food.destroy
-     redirect_to foods_path, notice: "Food was successfully destroyed." 
-   end
+    @food = Food.where(id: params[:id], user: current_user)
+     redirect_to foods_path, notice: "Food was successfully destroyed." if @food.destroy(params[:id])
     end
 
 
   private
 
   def food_params
-    params.require(:food).permit(:name, :price, :measurement_unit,:quantity).merge(user: current_user)
+    params.require(:food).permit(:name, :price, :measurement_unit).merge(user: current_user)
   end
 end
