@@ -1,5 +1,11 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  margin-top: -7px;
+}
+
 body {
-  font-weight: bold;
   font-family:
     'Lucida Sans',
     'Lucida Sans Regular',
@@ -8,6 +14,11 @@ body {
     Geneva,
     Verdana,
     sans-serif;
+}
+
+h1,h2,h3 {
+  color: #4a7856;
+  font-size: 1rem;
 }
 
 a {
@@ -50,6 +61,7 @@ a {
   background: #4a7856;
   color: #fff;
   border-radius: 8px;
+  margin-top: 24px;
 }
 
 .with-border {
@@ -81,4 +93,62 @@ a {
   background: #4a7856;
   color: #fff;
   border-radius: 8px;
+}
+
+.navbar-custom {
+  background: #4a7856;
+}
+
+.navbar-custom a {
+  color: #fff;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+}
+
+.alert {
+  position: relative;
+  padding: 1rem 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  text-align: center;
+  top: 77px;
+  margin-bottom: 75px;
+  color:#4a7856;
+}
+
+.sign-out-link-btn {
+  border: 2px solid #4a7856;
+  padding: 5px 8px;
+  background: #4a7856;
+  border-radius: 5px;
+
+}
+
+.recipe-details p {
+  color:#4a7856;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.add-ingredient-btn, .generate-btn {
+
+  color: #fff;
+  background: #4a7856;
+  border: 2px solid #4a7856;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.generate-btn {
+  margin-right: 10px;
+}
+
+.all-recipes {
+  margin-top: 20px;
+}
+
+.all-recipes a {
+  color:#4a7856;
 }
