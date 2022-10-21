@@ -3,6 +3,7 @@ class RecipeFoodsController < ApplicationController
     @recipe_food = RecipeFood.new
     @recipe = Recipe.where(id: params[:recipe_id], user: current_user)
   end
+
   def create
     @recipe = Recipe.where(id: params[:recipe_id], user: current_user)
     @recipe_food = RecipeFood.new(params.permit(:quantity, :recipe_id))

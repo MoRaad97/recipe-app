@@ -6,5 +6,4 @@ class Ability
 
     can(:manage, Recipe, user:)
   end
-  end
 end

@@ -12,8 +12,12 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <%= render partial: "shared/navbar" %>
+    <div class="message-container">
+      <p class="notice message"><%= notice %></p>
+      <p class="alert message"><%= alert %></p>
+    </div>
+    
     <div class="container d-flex justify-content-center flex-column align-items-center" >
       <%= yield %>
     </div>
