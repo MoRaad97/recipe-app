@@ -19,6 +19,7 @@ class RecipesController < ApplicationController
 
   def show
     @recipe, = Recipe.where(id: params[:id], user: current_user)
+    @foods = Food.where(user: current_user)
   end
 
   def destroy
