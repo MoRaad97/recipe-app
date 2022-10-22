@@ -7,4 +7,8 @@ Rails.application.routes.draw do
   end
   
   resources :foods, only: [:index, :new, :create, :destroy]
+
+  get 'public_recipes/:id', action: :show, controller: 'public_recipes'
+
+  get 'general_shopping_list', to: 'shopping_lists#missing_food'
 end
