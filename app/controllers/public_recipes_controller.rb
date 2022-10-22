@@ -5,5 +5,4 @@ class PublicRecipesController < ApplicationController
     def show
       @recipe, = Recipe.where(id: params[:id], public: true)
     end
-
 end
